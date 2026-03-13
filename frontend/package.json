@@ -1,6 +1,6 @@
 {
-  "name": "frontend",
-  "version": "0.0.0",
+  "name": "faceseek-photo-editor",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -15,19 +15,13 @@
     "vite": "^8.0.0"
   },
   "dependencies": {
-    "@react-oauth/google": "^0.13.4",
     "@vitejs/plugin-react": "^6.0.0",
-    "axios": "^1.13.6",
     "cropperjs": "^1.6.1",
-    "fabric": "^7.2.0",
-    "jwt-decode": "^4.0.0",
     "lucide-react": "^0.577.0",
     "react": "^19.2.4",
-    "react-color": "^2.19.3",
     "react-cropper": "^2.3.3",
     "react-dom": "^19.2.4",
     "react-hot-toast": "^2.6.0",
-    "react-router-dom": "^7.13.1",
-    "zustand": "^5.0.11"
+    "react-router-dom": "^7.13.1"
   }
 }
