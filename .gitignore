@@ -1,0 +1,48 @@
+# ─────────────────────────────────────────────
+#  ROOT .gitignore  (covers both sub-projects)
+# ─────────────────────────────────────────────
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment secrets — NEVER commit these
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs
+logs/
+*.log
+
+# Build artifacts
+dist/
+build/
+
+# Uploaded files (runtime, not source)
+backend/uploads/
+
+# Temp / scratch files
+test_flow.js
+*.tmp
+*.temp
+build_log.txt

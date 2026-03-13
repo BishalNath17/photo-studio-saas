@@ -1,0 +1,23 @@
+# ─────────────────────────────────────────────
+#  BACKEND .gitignore
+# ─────────────────────────────────────────────
+
+node_modules/
+
+# Environment secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Uploaded files — runtime only, not source code
+uploads/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
