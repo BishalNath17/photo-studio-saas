@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-saas-bg text-saas-text font-sans antialiased;
+    margin: 0;
+    padding: 0;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-saas-neon text-white font-medium py-2.5 px-5 rounded-lg transition-all duration-200
+    hover:bg-saas-neonHover hover:shadow-lg hover:shadow-saas-neon/20
+    active:scale-95
+    disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-none;
+  }
+  .btn-secondary {
+    @apply bg-saas-card text-saas-text font-medium py-2.5 px-5 rounded-lg border border-saas-border
+    transition-all duration-200
+    hover:bg-saas-border hover:text-white
+    active:scale-95
+    disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .input-field {
+    @apply w-full bg-saas-bg border border-saas-border rounded-lg px-4 py-2.5 text-saas-text
+    transition-all duration-200
+    focus:outline-none focus:ring-2 focus:ring-saas-neon/50 focus:border-saas-neon
+    placeholder:text-saas-muted;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0F172A; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+@layer utilities {
+  .animate-fade-in-up {
+    animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .animate-fade-in-up-delay {
+    animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+    opacity: 0;
+  }
+  
+  .text-glow-hover {
+    transition: all 0.4s ease;
+  }
+  .text-glow-hover:hover {
+    text-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+    transform: scale(1.02);
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .btn-hover-glow {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .btn-hover-glow:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.3);
+  }
+}
